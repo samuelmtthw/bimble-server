@@ -47,8 +47,9 @@ const uploadImages = async (req, res, next) => {
 				Videos.push(uploadedVideo);
 			}
 			req.body.Videos = Videos;
+		} else {
+			next();
 		}
-		next();
 	} catch (err) {
 		console.log(err)
 		next(err);

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npx nodemon bin/www",
-    "test": "npx jest --watchAll --detectOpenHandles --runInBand --verbose --forceExit",
+    "test": "npx jest --watchAll --detectOpenHandles --runInBand --verbose --forceExit --coverage",
     "init-db:dev": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all",
     "init-db:test": "npx sequelize --env=test db:drop && npx sequelize --env=test db:create && npx sequelize --env=test db:migrate"
   },
